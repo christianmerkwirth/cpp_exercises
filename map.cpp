@@ -24,9 +24,8 @@ int main()
     }
 
     for (uint32_t i = 0; const auto& [key, val] : embeddings) {
-        std::cout << key << " : " << val << std::endl;
-        if (i++ > 10)
-            break;
+        if (i++ % 1000)
+            std::cout << "Index " << i << " key: " << key << " value : " << val << std::endl;
     }
    
    return 0;
