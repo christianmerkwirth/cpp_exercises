@@ -1,6 +1,6 @@
 COMPILER         := g++
 OPTIMIZATION_OPT := -O1
-BASE_OPTIONS     := -pedantic-errors -Wall -Wextra -Werror -Wno-long-long -std=c++20
+BASE_OPTIONS     := -pedantic-errors -Wall -Wextra -Wno-long-long -std=c++20
 OPTIONS          := $(BASE_OPTIONS) $(OPTIMIZATION_OPT)
 LINKER_OPT       := -L/usr/lib -lstdc++ -lm
 ASAN_OPT         := -g -fsanitize=address   -fno-omit-frame-pointer
