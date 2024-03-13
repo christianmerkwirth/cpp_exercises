@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
  
-int main()
-{
+
+void run() {
     std::vector<int> v {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
  
     int sum = std::accumulate(v.begin(), v.end(), 0);
@@ -30,3 +30,8 @@ int main()
               << "dash-separated string: " << s << '\n'
               << "dash-separated string (right-folded): " << rs << '\n';
 }
+
+int main() {
+    run();
+}
+
