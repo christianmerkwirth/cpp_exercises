@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <numeric>
+#include <cmath>
 
  
 template <typename T>
@@ -25,16 +26,25 @@ std::vector<T> range(T start, T end) {
     return vec;
 }
 
-int main()
-{
-    std::vector<uint64_t> a = range(0ull, 10000ull);
-    std::vector<uint64_t> b = range(0ull, 2000ull);
+
+
+
+template <typename T>
+void run() {
+    std::vector<T> a = range(static_cast<T>(0), static_cast<T>(10000));
+    std::vector<T> b = range(static_cast<T>(0), static_cast<T>(2000));
 
     std::cout << reduce_sum(a) << " " << reduce_sum(b) << std::endl;
 
     swap(a, b);
 
     std::cout << reduce_sum(a) << " " << reduce_sum(b) << std::endl;
+}
 
+
+
+int main()
+{
+    run<uint64_t>();
     return 0;
 }
